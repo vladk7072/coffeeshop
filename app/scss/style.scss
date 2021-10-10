@@ -3,7 +3,51 @@
 @import 'reset';
 @import 'global';
 
-
+.header{
+  background-color: #1C1814;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 125px;
+    @extend %inter-400;
+  }
+  &__top-search{
+    margin-left: 38px;
+    padding: 10px;
+  }
+  &__top-basket{
+    margin-left: 38px;
+    padding: 10px;
+  }
+  &__logo-link{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: #fff;
+    &:hover{
+      .menu__item-link{
+        color: $gold;
+      }
+    }
+  }
+  &__item--active .menu__item-link{
+    color: $gold;
+  }
+  &__item + .menu__item{
+    margin-left: 48px;
+  }
+  &__item-link{
+    transition: all .3s;
+    color: #fff;
+  }
+}
 
 
 
