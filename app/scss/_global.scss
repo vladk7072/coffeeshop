@@ -1,8 +1,18 @@
-.container{
+
+a{
+  color: #fff;
+}
+.container-top{
   max-width: 1335px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.container{
+  max-width: 1190px;
   margin: 0 auto;
   padding: 0 10px;
 }
 .title{
   @extend %right-400;
+  color: #fff;
 }

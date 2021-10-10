@@ -1,65 +1,98 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
 
-.header{
-  background-color: #1C1814;
-  &__top{
+.header {
+  background-color: #1c1814;
+  &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 125px;
     @extend %inter-400;
   }
-  &__top-search{
+  &__top-search {
     margin-left: 38px;
     padding: 10px;
   }
-  &__top-basket{
+  &__top-basket {
     margin-left: 38px;
     padding: 10px;
   }
-  &__logo-link{
+  &__logo-link {
     margin-left: auto;
     margin-right: auto;
   }
 }
-.menu{
-  &__list{
+.menu {
+  &__list {
     display: flex;
   }
-  &__item{
+  &__item {
     color: #fff;
-    &:hover{
-      .menu__item-link{
+    &:hover {
+      .menu__item-link {
         color: $gold;
       }
     }
   }
-  &__item--active .menu__item-link{
+  &__item--active .menu__item-link {
     color: $gold;
   }
-  &__item + .menu__item{
+  &__item + .menu__item {
     margin-left: 48px;
   }
-  &__item-link{
-    transition: all .3s;
-    color: #fff;
+  &__item-link {
+    transition: all 0.3s;
   }
 }
 
+.home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: calc(100vh - 125px);
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 125px);
+  }
+  &__title {
+    max-width: 530px;
+    font-size: 72px;
+    line-height: 130%;
+  }
+  &__text {
+    margin: 32px 0 64px;
+    max-width: 511px;
+    font-size: 20px;
+    line-height: 180%;
+    @extend %urban-500;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &__link {
+    background-color: $gold;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 24px 40px;
+    display: inline-block;
+    text-transform: uppercase;
+    @extend %inter-700;
+  }
+  &__video-link{
+    margin: 0 auto 20px;
+  }
+  &__video-title {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    @extend %inter-400;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-@import 'media';
+@import "media";

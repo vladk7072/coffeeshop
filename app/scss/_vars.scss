@@ -21,3 +21,9 @@ $gold: #C99E71;
   font-family: 'Urbanist-SemiBold';
   font-weight: 600;
 }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
