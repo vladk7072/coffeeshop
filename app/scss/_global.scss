@@ -18,3 +18,12 @@ a{
   @extend %right-400;
   color: #fff;
 }
+.button{
+  @extend %inter-700;
+  padding: 20px 36px;
+  background-color: $gold;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 22px;
+  display: inline-block;
+}

@@ -74,14 +74,7 @@
     color: rgba(255, 255, 255, 0.8);
   }
   &__link {
-    background-color: $gold;
-    color: #fff;
-    font-size: 18px;
-    line-height: 22px;
     padding: 24px 40px;
-    display: inline-block;
-    text-transform: uppercase;
-    @extend %inter-700;
   }
   &__video-link {
     margin: 0 auto 20px;
@@ -111,15 +104,17 @@
       counter-increment: counter;
       position: absolute;
       color: $gold;
+      @extend %right-400;
+      font-size: 26px;
+      line-height: 30px;
     }
   }
   &__title {
-    margin: 0 0 24px 35px;
+    margin: 0 0 24px 38px;
     color: #fff;
   }
 }
 .history {
-  padding-bottom: 140px;
   &__items {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -170,6 +165,201 @@
     font-size: 16px;
     line-height: 180%;
     text-transform: capitalize;
+  }
+}
+.product {
+  padding: 140px 0;
+  &__subtitle {
+    @extend %urban-600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $gold;
+    text-align: center;
+  }
+  &__title {
+    @extend %right-400;
+    margin: 12px 0 56px;
+    font-size: 48px;
+    line-height: 130%;
+    text-align: center;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    max-width: 366px;
+    width: 100%;
+    min-height: 580px;
+    background-color: #121315;
+    text-align: center;
+    overflow: hidden;
+    // transition: all .3s;
+    &:hover {
+      .product__item-price {
+        opacity: 0;
+      }
+      .product__item-subtitle {
+        opacity: 0;
+      }
+      .product__basket {
+        transform: translateY(-45px);
+      }
+      .product__item-title {
+        transform: translateY(-40px);
+      }
+    }
+  }
+  &__img {
+    width: 270px;
+    height: 343px;
+    object-fit: cover;
+    margin: 48px auto 0;
+  }
+  &__item-subtitle {
+    @extend %urban-500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $gold;
+    display: flex;
+    justify-content: center;
+    margin-top: 37px;
+    opacity: 1;
+    transition: all 0.3s;
+    .star {
+      margin-left: 15px;
+    }
+  }
+  &__item-title {
+    @extend %right-400;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 20px 0;
+    transition: all 0.3s;
+  }
+  &__item-price {
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    @extend %urban-600;
+    color: #fff;
+    opacity: 1;
+    transition: all 0.3s;
+    span {
+      color: $gold;
+    }
+  }
+  &__old-price {
+    text-decoration: line-through;
+    color: #fff !important;
+  }
+  &__basket {
+    @extend %urban-600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    background-color: $gold;
+    padding: 13px 20px 13px 56px;
+    border: none;
+    transition: all 0.3s;
+    transform: translateY(80px);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/product/shopping-bag.svg);
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+    }
+  }
+  &__all {
+    display: flex;
+    max-width: 252px;
+    margin: 56px auto 0;
+  }
+}
+.machine {
+  &__wrapper {
+    padding: 72px 0 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1814;
+  }
+  &__box {
+    margin-left: 160px;
+  }
+  &__img {
+    width: 226px;
+    height: 359px;
+    object-fit: cover;
+  }
+  &__title {
+    @extend %right-400;
+    max-width: 520px;
+    font-size: 48px;
+    line-height: 130%;
+  }
+  &__text {
+    padding: 36px 0 36px;
+    max-width: 535px;
+    @extend %urban-500;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+  }
+}
+.carte {
+  padding: 140px 0;
+  &__subtitle {
+    @extend %urban-600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $gold;
+    text-align: center;
+  }
+  &__title {
+    padding: 12px 0 56px;
+    font-size: 48px;
+    line-height: 130%;
+    text-align: center;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+  &__item {
+    display: flex;
+    border: 1px solid #32323d;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+  }
+  &__item-title {
+    @extend %right-400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+  }
+  &__item-price {
+    @extend %urban-600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $gold;
   }
 }
 
