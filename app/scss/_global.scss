@@ -1,24 +1,35 @@
-body{
-  background-color: #14110E;
+body {
+  background-color: #14110e;
 }
-a{
+a {
   color: #fff;
 }
-.container-top{
+.container-top {
   max-width: 1335px;
   margin: 0 auto;
   padding: 0 10px;
 }
-.container{
+.container {
   max-width: 1190px;
   margin: 0 auto;
   padding: 0 10px;
 }
-.title{
+.title {
   @extend %right-400;
   color: #fff;
+  padding: 12px 0 56px;
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
 }
-.button{
+.subtitle {
+  @extend %urban-600;
+  font-size: 18px;
+  line-height: 22px;
+  color: $gold;
+  text-align: center;
+}
+.button {
   @extend %inter-700;
   padding: 20px 36px;
   background-color: $gold;
@@ -26,4 +37,7 @@ a{
   font-size: 18px;
   line-height: 22px;
   display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  border: none;
 }
