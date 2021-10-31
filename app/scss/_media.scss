@@ -1,0 +1,375 @@
+@media (max-width: 1024px) {
+  .header {
+    position: relative;
+    &__burger {
+      display: block;
+      margin-left: 50px;
+    }
+    .menu {
+      display: none;
+    }
+    .menu__item {
+      background-color: $gold;
+      border-radius: 40px;
+      width: 100%;
+      text-align: center;
+      padding: 6px;
+    }
+    .menu--active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+    }
+    .menu--2 {
+      margin-top: 50px;
+    }
+    &__logo-link {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    &__top-search {
+      margin-left: 0;
+    }
+    &__top-basket {
+      margin-left: 50px;
+    }
+  }
+  .home {
+    &__video {
+      margin-right: 100px;
+    }
+  }
+  .carte {
+    &__list {
+      grid-gap: 20px;
+    }
+    &__item {
+      padding: 10px;
+    }
+    &__item-title {
+      margin: 0 10px;
+    }
+  }
+}
+@media (max-width: 940px) {
+  .staps {
+    &__title {
+      font-size: 21px;
+      line-height: 27px;
+    }
+    &__item::before {
+      font-size: 21px;
+      line-height: 27px;
+    }
+  }
+  .history {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+    &__item:nth-child(1) {
+      grid-row: span 2;
+    }
+    &__item:nth-child(2) {
+      grid-row: span 4;
+    }
+    &__item:nth-child(3) {
+      order: 1;
+      grid-column: span 4;
+      padding: 15px 56px;
+    }
+    &__item:nth-child(4) {
+      grid-row: span 2;
+    }
+  }
+  .product {
+    &__items {
+      grid-gap: 20px;
+    }
+  }
+  .machine {
+    &__box {
+      margin-left: 70px;
+    }
+  }
+  .reservation {
+    &__wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    &__map {
+      height: 500px;
+      order: 1;
+    }
+    &__form {
+      margin: 30px 0;
+    }
+    &__subtitle {
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    height: 100%;
+    &__wrapper {
+      height: 100%;
+      padding: 15px 0;
+    }
+    &__wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__video {
+      margin-right: 0;
+      margin-top: 40px;
+    }
+    &__video-link {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .product {
+    &__item {
+      height: 515px;
+    }
+    &__img {
+      margin-top: 30px;
+    }
+    &__item-subtitle {
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin-top: 5px;
+      }
+    }
+    &__item-title {
+      font-size: 21px;
+      line-height: 28px;
+    }
+    &__all {
+      margin-top: 40px;
+    }
+  }
+  .machine {
+    &__wrapper {
+      padding: 50px 0;
+    }
+    &__box {
+      margin-left: 40px;
+    }
+  }
+  .news {
+    &__list {
+      grid-column-gap: 20px;
+    }
+    &__submenu {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__author {
+      line-height: 27px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .carte {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 470px;
+      grid-gap: 20px;
+      margin: 0 auto;
+    }
+  }
+  .says {
+    &__list {
+      padding-bottom: 40px;
+    }
+  }
+}
+@media (max-width: 630px) {
+  .staps {
+    padding: 80px 0;
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      margin: 0 auto;
+    }
+    &__item + .staps__item {
+      margin-top: 20px;
+    }
+    &__title {
+      margin: 0 0 20px 30px;
+    }
+  }
+  .product {
+    padding: 80px 0;
+    &__item {
+      height: 480px;
+    }
+  }
+  .carte {
+    padding: 80px 0;
+  }
+  .reservation {
+    padding: 80px 0;
+  }
+  .news {
+    padding-bottom: 80px;
+  }
+  .client {
+    padding-bottom: 80px;
+  }
+  .machine {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__link {
+      display: flex;
+      max-width: 220px;
+      margin-left: auto;
+      text-align: center;
+    }
+    &__img {
+      margin: 0 0 36px 0;
+    }
+  }
+  .news{
+    &__box{
+      padding: 15px;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .header {
+    &__burger {
+      margin-left: 20px;
+    }
+    &__top-basket {
+      margin-left: 10px;
+    }
+  }
+  .home {
+    &__title {
+      font-size: 54px;
+    }
+    &__text {
+      margin: 30px 0;
+      font-size: 18px;
+    }
+    &__link {
+      display: flex;
+      max-width: 202px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    .button {
+      font-size: 16px;
+      line-height: 21px;
+      padding: 16px 28px;
+    }
+    &__video-title {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+  .product {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      height: 565px;
+    }
+  }
+  .carte {
+    &__list {
+      grid-column-gap: 0;
+    }
+  }
+  .says {
+    &__item {
+      padding: 20px;
+    }
+    &__item-top {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item-img {
+      align-self: flex-start;
+    }
+    &__item-text {
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+  // .news{
+  //   &__list{
+  //     grid-template-columns: repeat(1, 1fr);
+  //   }
+  // }
+}
+@media (max-width: 500px) {
+  .machine {
+    &__link {
+      margin-right: auto;
+    }
+  }
+  .reservation {
+    &__array {
+      padding: 15px 20px;
+    }
+    &__input {
+      padding: 10px 15px;
+      max-width: 190px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    &__btn {
+      margin-top: 45px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &__map {
+      height: 470px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .history {
+    &__item:nth-child(3) {
+      padding: 15px 25px;
+    }
+  }
+  .carte {
+    &__item-title {
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
+  .says {
+    &__item-name {
+      margin-bottom: 8px;
+    }
+    &__item-profesion {
+      line-height: 120%;
+    }
+  }
+  .reservation {
+    &__map {
+      height: 400px;
+    }
+  }
+}

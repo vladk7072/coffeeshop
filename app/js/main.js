@@ -1,5 +1,19 @@
-
 $(function () {
+
+  $(".header__burger").click(function () {
+    $(".header__burger").toggleClass("header__burger--active");
+    $(".menu").toggleClass("menu--active");
+  });
+
+  // $(".header__list li a").click(function () {
+  //   $(".header__burger").removeClass("header__burger--active");
+  //   $(".header__list").removeClass("header__list--active");
+  // });
+  // $(".header__list li button").click(function () {
+  //   $(".header__burger").removeClass("header__burger--active");
+  //   $(".header__list").removeClass("header__list--active");
+  // });
+
   $(".star").rateYo({
     rating: 4,
     starWidth: "17px",
@@ -13,9 +27,9 @@ $(function () {
     spacing: "4px",
   });
 
-  new Swiper(".says__slider", {
+  let myImageSlider = new Swiper(".says__slider", {
     slidesPerView: 2,
-    slidesPerGroup: 2,
+    slidesPerGroup: 1,
     spaceBetween: 30,
     grabCursor: true,
     slideToClickedSlide: true,
@@ -23,9 +37,6 @@ $(function () {
       enabled: true,
       onlyInViewport: true,
       pageUpDown: true,
-    },
-    mousewheel: {
-      eventsTarget: ".says__slider",
     },
     navigation: {
       prevEl: ".says__arrow-prev",
@@ -35,13 +46,25 @@ $(function () {
       el: ".says__pagination",
       type: "progressbar",
     },
+    breakpoints: {
+      1: {
+        slidesPerView: 1,
+      },
+      900: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
+  var mySliderAllSlides = document.querySelector('.says__total');
+  var mySliderCurrentSlides = document.querySelector('.says__current');
+
+  mySliderAllSlides.innerHTML = myImageSlider.slides.length;
+
+  myImageSlider.on('slideChange', function(){
+    var currentSlide = ++myImageSlider.realIndex;
+    mySliderCurrentSlides.innerHTML = currentSlide;
   });
 
   
-  // let arrowPrev = document.querySelector('.says__arrow-prev');
-  // let arrowNext = document.querySelector('.says__arrow-next');
-
-  // let saysCurrent = document.querySelector('.says__current');
-  // let saysSepparator = document.querySelector('.says__sepparator');
-  // let saysTotal = document.querySelector('.says__total');
 });
