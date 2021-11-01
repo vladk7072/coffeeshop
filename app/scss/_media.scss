@@ -4,28 +4,10 @@
     &__burger {
       display: block;
       margin-left: 50px;
+      cursor: pointer;
     }
     .menu {
       display: none;
-    }
-    .menu__item {
-      background-color: $gold;
-      border-radius: 40px;
-      width: 100%;
-      text-align: center;
-      padding: 6px;
-    }
-    .menu--active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      top: 22px;
-      left: 0;
-      right: 0;
-    }
-    .menu--2 {
-      margin-top: 50px;
     }
     &__logo-link {
       margin-left: 0;
@@ -52,6 +34,11 @@
     }
     &__item-title {
       margin: 0 10px;
+    }
+  }
+  .client {
+    &__list {
+      display: none;
     }
   }
 }
@@ -183,6 +170,17 @@
       line-height: 120%;
     }
   }
+  .copyright {
+    &__wrapper {
+      padding: 20px 0;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+    &__text {
+      grid-column: 1/2;
+      margin-bottom: 5px;
+    }
+  }
 }
 @media (max-width: 650px) {
   .carte {
@@ -194,8 +192,39 @@
     }
   }
   .says {
+    margin-top: -645px;
+    background-color: #14110E;
+    position: relative;
+    box-shadow: 0 -30px 10px 10px #14110E;
+    transition: all .3s;
+    &__active{
+      margin-top: -35px;
+      .says__subtitle{
+        transition: all .3s;
+        &::before{
+          background-image: url('../images/says/up.svg');
+        }
+      }
+    }
     &__list {
       padding-bottom: 40px;
+    }
+    &__subtitle{
+      padding-top: 25px;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../images/says/down.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 16px;
+        height: 12px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
@@ -247,8 +276,8 @@
       margin: 0 0 36px 0;
     }
   }
-  .news{
-    &__box{
+  .news {
+    &__box {
       padding: 15px;
     }
   }
@@ -313,13 +342,20 @@
     &__item-text {
       margin-top: 20px;
       padding: 0;
+      font-size: 14px;
+      line-height: 140%;
     }
   }
-  // .news{
-  //   &__list{
-  //     grid-template-columns: repeat(1, 1fr);
-  //   }
-  // }
+  .news {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 15px;
+    }
+    &__img {
+      margin: 15px auto 0;
+      padding: 0 15px;
+    }
+  }
 }
 @media (max-width: 500px) {
   .machine {
@@ -344,6 +380,19 @@
     }
     &__map {
       height: 470px;
+    }
+  }
+  .client {
+    &__email-text {
+      padding: 15px 70px 15px 20px;
+      width: 100%;
+      margin-left: 10px;
+    }
+    &__email-btn {
+      right: -4px;
+    }
+    &__author {
+      font-size: 13px;
     }
   }
 }
