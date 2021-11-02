@@ -193,29 +193,29 @@
   }
   .says {
     margin-top: -645px;
-    background-color: #14110E;
+    background-color: #14110e;
     position: relative;
-    box-shadow: 0 -30px 10px 10px #14110E;
-    transition: all .3s;
-    &__active{
+    box-shadow: 0 -30px 10px 10px #14110e;
+    transition: all 0.3s;
+    &__active {
       margin-top: -35px;
-      .says__subtitle{
-        transition: all .3s;
-        &::before{
-          background-image: url('../images/says/up.svg');
+      .says__subtitle {
+        transition: all 0.3s;
+        &::before {
+          background-image: url("../images/says/up.svg");
         }
       }
     }
     &__list {
       padding-bottom: 40px;
     }
-    &__subtitle{
+    &__subtitle {
       padding-top: 25px;
       position: relative;
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
-        background-image: url('../images/says/down.svg');
+        background-image: url("../images/says/down.svg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
