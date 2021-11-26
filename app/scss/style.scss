@@ -99,14 +99,12 @@
     left: 0;
     right: 0;
     background-color: rgba($gold, 0.9);
-    transform: translateX(-200ch);
+    transform: translateX(-400ch);
     padding: 15px 0;
     transition: all .3s;
     z-index: 10;
   }
-  &__list-mob--active {
-    transform: translateY(0);
-  }
+  
   &__item {
     color: #fff;
     &:hover {
@@ -536,6 +534,9 @@
     border-radius: 50px;
     z-index: 10;
     transition: all 0.3s;
+    &:focus{
+      outline: none;
+    }
   }
   &__arrow-prev.swiper-button-disabled,
   &__arrow-next.swiper-button-disabled {

@@ -19,9 +19,17 @@
   }
   .menu {
     display: none;
-    
+    &__list-mob {
+      transform: translateX(-200ch);
+    }
+    &__list-mob--active {
+      transform: translateX(0);
+    }
   }
   .home {
+    &__title{
+      margin-top: 15px;
+    }
     &__video {
       margin-right: 100px;
     }
