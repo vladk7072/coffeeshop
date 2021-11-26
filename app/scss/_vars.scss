@@ -20,6 +20,7 @@ $gold: #c99e71;
   font-family: "Urbanist-SemiBold";
   font-weight: 600;
 }
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }

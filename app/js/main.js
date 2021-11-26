@@ -64,4 +64,6 @@ $(function () {
     var currentSlide = ++myImageSlider.realIndex;
     mySliderCurrentSlides.innerHTML = currentSlide;
   });
+
+  
 });
